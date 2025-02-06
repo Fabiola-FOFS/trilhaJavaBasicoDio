@@ -1,0 +1,110 @@
+A classe String em Java é uma das classes mais utilizadas e representa uma sequência de caracteres. Diferente dos tipos primitivos, String é uma classe, ou seja, é um tipo de referência (objeto). No entanto, ela tem um tratamento especial na linguagem, permitindo que você trabalhe com strings de forma simples e intuitiva.
+
+Características da Classe String:
+Imutabilidade: Strings em Java são imutáveis, o que significa que uma vez criadas, seu conteúdo não pode ser alterado. Qualquer operação que modifique uma string resulta em uma nova string.
+
+Uso de aspas duplas: Strings são criadas usando aspas duplas ("), enquanto caracteres individuais usam aspas simples (').
+
+Métodos úteis: A classe String possui muitos métodos para manipulação de textos, como concatenação, busca, substituição, etc.
+
+Exemplos de Uso da Classe String
+
+1. Criando uma String
+
+String nome = "Java";
+System.out.println(nome); // Saída: Java
+
+2. Concatenação de Strings
+Você pode concatenar strings usando o operador + ou o método concat().
+
+String saudacao = "Olá, " + nome + "!";
+System.out.println(saudacao); // Saída: Olá, Java!
+String outraSaudacao = "Olá, ".concat(nome).concat("!");
+System.out.println(outraSaudacao); // Saída: Olá, Java!
+
+
+3. Tamanho de uma String
+Use o método length() para obter o número de caracteres na string.
+int tamanho = nome.length();
+System.out.println("Tamanho: " + tamanho); // Saída: Tamanho: 4
+
+
+4. Acessando Caracteres
+Use o método charAt() para acessar um caractere em uma posição específica.
+
+char primeiroCaractere = nome.charAt(0);
+System.out.println("Primeiro caractere: " + primeiroCaractere); // Saída: Primeiro caractere: J
+5. Comparação de Strings
+Para comparar strings, use o método equals() (comparação de conteúdo) ou equalsIgnoreCase() (ignorando maiúsculas/minúsculas).
+
+java
+Copy
+String outraString = "java";
+System.out.println(nome.equals(outraString)); // Saída: false (diferente por causa do caso)
+System.out.println(nome.equalsIgnoreCase(outraString)); // Saída: true (ignora maiúsculas/minúsculas)
+6. Substrings
+Use o método substring() para extrair uma parte da string.
+
+java
+Copy
+String texto = "Programação Java";
+String parte = texto.substring(13); // Extrai a partir do índice 13
+System.out.println(parte); // Saída: Java
+
+String parte2 = texto.substring(0, 12); // Extrai do índice 0 ao 11
+System.out.println(parte2); // Saída: Programação
+7. Busca em Strings
+Use métodos como indexOf() para encontrar a posição de um caractere ou substring.
+
+java
+Copy
+int posicao = texto.indexOf("Java");
+System.out.println("Posição de 'Java': " + posicao); // Saída: Posição de 'Java': 13
+8. Substituição de Texto
+Use o método replace() para substituir partes da string.
+
+java
+Copy
+String novaString = texto.replace("Java", "Python");
+System.out.println(novaString); // Saída: Programação Python
+9. Conversão para Maiúsculas/Minúsculas
+Use toUpperCase() e toLowerCase() para alterar o caso da string.
+
+java
+Copy
+String maiuscula = nome.toUpperCase();
+System.out.println(maiuscula); // Saída: JAVA
+
+String minuscula = nome.toLowerCase();
+System.out.println(minuscula); // Saída: java
+10. Verificação de Strings Vazias
+Use o método isEmpty() para verificar se uma string está vazia.
+
+java
+Copy
+String vazia = "";
+System.out.println(vazia.isEmpty()); // Saída: true
+11. Remoção de Espaços em Branco
+Use o método trim() para remover espaços em branco no início e no final da string.
+
+java
+Copy
+String comEspacos = "   Java   ";
+String semEspacos = comEspacos.trim();
+System.out.println(semEspacos); // Saída: Java
+Observações Importantes:
+Imutabilidade: Como as strings são imutáveis, operações como replace(), toUpperCase(), etc., retornam uma nova string em vez de modificar a original.
+
+Pool de Strings: Java mantém um pool de strings para otimizar o uso de memória. Quando você cria uma string literal (ex: String s = "Java";), o Java verifica se ela já existe no pool e reutiliza a referência, se possível.
+
+Exemplo:
+
+java
+Copy
+String s1 = "Java";
+String s2 = "Java";
+System.out.println(s1 == s2); // Saída: true (ambas apontam para o mesmo objeto no pool)
+
+String s3 = new String("Java");
+System.out.println(s1 == s3); // Saída: false (s3 é um novo objeto, não está no pool)
+A classe String é extremamente poderosa e versátil, sendo essencial para qualquer programa em Java que envolva manipulação de texto.

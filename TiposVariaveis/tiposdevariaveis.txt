@@ -1,0 +1,43 @@
+Em Java, os tipos primitivos são os tipos de dados básicos que não são objetos e são usados para armazenar valores simples. Eles são armazenados diretamente na memória e têm um desempenho mais eficiente em comparação com os objetos. Os tipos primitivos em Java são:
+
+1. **byte**:
+   - Tamanho: 8 bits (1 byte)
+   - Intervalo: -128 a 127
+   - Exemplo: `byte b = 100;`
+
+2. **short**:
+   - Tamanho: 16 bits (2 bytes)
+   - Intervalo: -32,768 a 32,767
+   - Exemplo: `short s = 10000;`
+
+3. **int**:
+   - Tamanho: 32 bits (4 bytes)
+   - Intervalo: -2^31 a 2^31-1
+   - Exemplo: `int i = 100000;`
+
+4. **long**:
+   - Tamanho: 64 bits (8 bytes)
+   - Intervalo: -2^63 a 2^63-1
+   - Exemplo: `long l = 10000000000L;` (Note o sufixo `L` para indicar um literal longo)
+
+5. **float**:
+   - Tamanho: 32 bits (4 bytes)
+   - Precisão: 6-7 dígitos decimais
+   - Exemplo: `float f = 3.14f;` (Note o sufixo `f` para indicar um literal float)
+
+6. **double**:
+   - Tamanho: 64 bits (8 bytes)
+   - Precisão: 15 dígitos decimais
+   - Exemplo: `double d = 3.141592653589793;`
+
+7. **char**:
+   - Tamanho: 16 bits (2 bytes)
+   - Intervalo: 0 a 65,535 (representa um caractere Unicode)
+   - Exemplo: `char c = 'A';`
+
+8. **boolean**:
+   - Tamanho: não é precisamente definido (pode ser um bit, mas geralmente é implementado como um byte)
+   - Valores possíveis: `true` ou `false`
+   - Exemplo: `boolean b = true;`
+
+Esses tipos primitivos são a base para a manipulação de dados em Java e são usados em situações onde a eficiência é crucial, como em operações matemáticas ou em estruturas de dados simples.
